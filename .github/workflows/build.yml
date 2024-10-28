@@ -47,7 +47,7 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ap-south-1  # Adjust to your preferred region
   upload :
-    needs: build
+    requires: build
     if: github.event_name == 'push' && github.event.action != 'pull_request'
     steps :
     - name: Upload to S3
