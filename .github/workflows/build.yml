@@ -46,7 +46,10 @@ jobs:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ap-south-1  # Adjust to your preferred region
-
+  upload :
+    needs: build
+    if: github.event_name == 'push' && github.event.action != 'pull_request'
+    steps :
     - name: Upload to S3
       run: |
         aws s3 cp target/*.jar s3://mybucketajay/
