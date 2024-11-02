@@ -26,21 +26,21 @@
     }
 
     function deleteStudent(id) {
-    window.location.href = "/delete/student/" + id;
+    window.location.href = "/grade-app/delete/student/" + id;
     }
 
     function deleteMathGrade(id) {
-    window.location.href = "/grades/" + id + "/" + "math";
+    window.location.href = "/grade-app/grades/" + id + "/" + "math";
     }
 
     function deleteScienceGrade(id) {
-    window.location.href = "/grades/" + id + "/" + "science";
+    window.location.href = "/grade-app/grades/" + id + "/" + "science";
     }
 
     function deleteHistoryGrade(id) {
-    window.location.href = "/grades/" + id + "/" + "history";
+    window.location.href = "/grade-app/grades/" + id + "/" + "history";
     }
 
     function studentInfo(id) {
-        window.location.href = "/studentInformation/" + id;
+        window.location.href = "/grade-app/studentInformation/" + id;
     }
